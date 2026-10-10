@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israr Institute of Quranic Studies - Learn Quran Online</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ruby: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                            950: '#4c0519',
+                        },
+                        crimson: {
+                            700: '#a30000',
+                            800: '#8b0000',
+                            900: '#600000',
+                            950: '#3a0000',
+                        },
+                        darkness: {
+                            900: '#0f0f0f',
+                            800: '#1a1a1a',
+                            700: '#2b2b2b',
+                        }
+                    },
+                    fontFamily: {
+                        arabic: ['Amiri', 'serif'],
+                        urdu: ['Noto Nastaliq Urdu', 'serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-islamic-pattern-red {
+            background-color: #1a1a1a;
+            background-image: radial-gradient(#be123c 0.8px, transparent 0.8px), radial-gradient(#be123c 0.8px, #1a1a1a 0.8px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px;
+        }
+        .bg-white-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e11d48 0.4px, transparent 0.4px);
+            background-size: 20px 20px;
+        }
+        .red-gradient-bg {
+            background: linear-gradient(135deg, #be123c 0%, #8b0000 60%, #3a0000 100%);
+        }
+        .red-black-gradient {
+            background: linear-gradient(135deg, #8b0000 0%, #1a1a1a 100%);
+        }
+        .red-gradient-text {
+            background: linear-gradient(135deg, #f43f5e 0%, #e11d48 50%, #9f1239 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .white-red-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+        .urdu-text {
+            line-height: 2.3;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased overflow-x-hidden">
+
+    <div class="bg-darkness-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-ruby-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:+923442823699" class="hover:text-ruby-500 transition-colors flex items-center gap-1.5 font-semibold">
+                    <i class="fas fa-phone text-ruby-600"></i> +92 344 2823699
+                </a>
+                <a href="mailto:info@israrquraninstitute.com" class="hover:text-ruby-500 transition-colors flex items-center gap-1.5 hidden md:flex">
+                    <i class="fas fa-envelope text-ruby-600"></i> info@israrquraninstitute.com
+                </a>
+                <span class="text-gray-700">|</span>
+                <span class="text-gray-300 text-xs flex items-center gap-1">
+                    <i class="fas fa-globe text-ruby-500"></i> Global Online Classes (US / UK / EU / Middle East)
+                </span>
+            </div>
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                <a href="https://wa.me/923442823699?text=Assalam-o-Alaikum,%20I%20want%20to%20register%20for%20a%20Free%20Trial%20Class." target="_blank" class="bg-ruby-700 hover:bg-ruby-800 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm">
+                    <i class="fab fa-whatsapp text-white text-sm"></i> WhatsApp Quick Connect
+                </a>
+                <div class="flex items-center space-x-2 text-xs">
+                    <span class="cursor-pointer font-bold text-ruby-500 underline">EN</span>
+                    <span class="text-gray-600">/</span>
+                    <span class="cursor-pointer font-urdu text-xs opacity-80 hover:opacity-100">اردو</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-40 bg-darkness-800/95 backdrop-blur-md border-b-2 border-ruby-700 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full red-gradient-bg p-0.5 shadow-lg flex items-center justify-center border border-ruby-500">
+                        <div class="w-full h-full bg-darkness-900 rounded-full flex items-center justify-center">
+                            <i class="fas fa-quran text-ruby-500 text-xl group-hover:scale-110 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-heading font-extrabold text-lg sm:text-xl text-white tracking-wide">ISRAR INSTITUTE</div>
+                        <div class="text-[10px] sm:text-xs text-ruby-500 font-bold tracking-widest uppercase">Of Quranic Studies</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="#home" class="text-ruby-500 hover:text-white transition-colors">Home</a>
+                    <a href="#ayah" class="text-gray-200 hover:text-ruby-500 transition-colors">Importance of Ilm</a>
+                    <a href="#courses" class="text-gray-200 hover:text-ruby-500 transition-colors">Our Courses</a>
+                    <a href="#features" class="text-gray-200 hover:text-ruby-500 transition-colors">Why Choose Us</a>
+                    <a href="#fees" class="text-gray-200 hover:text-ruby-500 transition-colors">Fee Structure</a>
+                    <a href="#contact" class="text-gray-200 hover:text-ruby-500 transition-colors">Contact</a>
+                </div>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="openModal()" class="red-gradient-bg text-white font-bold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-ruby-700/40 hover:scale-105 transition-all flex items-center gap-2 border border-ruby-500/50">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Book Free Trial</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-ruby-500 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-darkness-900 border-b border-ruby-900 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-ruby-500 border-b border-darkness-700 font-semibold">Home</a>
+            <a href="#ayah" class="block py-2 text-white border-b border-darkness-700">Importance of Ilm</a>
+            <a href="#courses" class="block py-2 text-white border-b border-darkness-700">Our Courses</a>
+            <a href="#features" class="block py-2 text-white border-b border-darkness-700">Why Choose Us</a>
+            <a href="#fees" class="block py-2 text-white border-b border-darkness-700">Fee Structure</a>
+            <a href="#contact" class="block py-2 text-white border-b border-darkness-700">Contact</a>
+            <button onclick="openModal()" class="w-full mt-4 red-gradient-bg text-white font-bold py-3 rounded-xl shadow-md flex justify-center items-center gap-2">
+                <i class="fas fa-graduation-cap"></i> Book Free Trial
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative bg-islamic-pattern-red py-16 lg:py-24 text-white overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-ruby-700/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Hadith Banner Header -->
+            <div class="max-w-4xl mx-auto text-center mb-12 bg-darkness-800/90 p-6 sm:p-8 rounded-3xl border-2 border-ruby-600 shadow-2xl relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-ruby-600 text-white text-xs font-bold px-5 py-1 rounded-full uppercase tracking-wider shadow">
+                    Hadith-e-Nabvi (SAW) • Sahih Bukhari
+                </div>
+                <div class="font-arabic text-3xl sm:text-4xl text-ruby-500 mt-2 mb-3 leading-relaxed font-bold">
+                    "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ"
+                </div>
+                <p class="text-gray-200 font-sans text-sm sm:text-base italic">
+                    "The best among you are those who learn the Quran and teach it."
+                </p>
+                <p class="font-urdu text-ruby-400 text-sm sm:text-base mt-2 urdu-text" dir="rtl">
+                    "تم میں سے بہترین وہ ہے جو قرآن سیکھے اور سکھائے۔"
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ruby-950 border border-ruby-600 text-ruby-400 text-xs font-bold">
+                        <i class="fas fa-certificate text-ruby-500"></i>
+                        <span>1-on-1 Personalized Live Online Classes</span>
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-5xl font-black text-white leading-tight">
+                        Illuminate Your Heart with <span class="text-ruby-500">Quranic Wisdom</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Welcome to <strong class="text-ruby-500 font-bold">Israr Institute of Quranic Studies</strong>. We offer structured, authentic, and interactive online Quran learning for kids and adults worldwide. Master Tajweed, Nazra, Hifz, and Islamic studies with certified tutors from home.
+                    </p>
+
+                    <div class="p-4 bg-darkness-800 rounded-xl border-l-4 border-ruby-600 text-right font-urdu text-white text-sm sm:text-base urdu-text" dir="rtl">
+                        گھر بیٹھے تجوید و ترتیل کے ساتھ آن لائن قرآن مجید سیکھیے۔ بچوں اور بڑوں کے لیے خصوصی انفرادی کلاسز۔
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="openModal()" class="w-full sm:w-auto red-gradient-bg text-white font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-ruby-700/50 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 border border-ruby-500/50">
+                            <i class="fas fa-laptop-house text-lg"></i>
+                            <span>Start 3-Day Free Trial</span>
+                        </button>
+                        <a href="#courses" class="w-full sm:w-auto bg-darkness-800 text-white hover:bg-ruby-600 font-bold px-7 py-3.5 rounded-xl border border-ruby-600 transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fas fa-book-open text-ruby-500"></i>
+                            <span>Explore Courses</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-darkness-700">
+                        <div class="text-center lg:text-left">
+                            <div class="text-ruby-500 font-extrabold text-xl sm:text-2xl">100%</div>
+                            <div class="text-xs text-gray-400">One-to-One Focus</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-ruby-500 font-extrabold text-xl sm:text-2xl">24/7</div>
+                            <div class="text-xs text-gray-400">Flexible Hours</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-ruby-500 font-extrabold text-xl sm:text-2xl">Certified</div>
+                            <div class="text-xs text-gray-400">Male & Female Tutors</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Graphic -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="bg-darkness-800 rounded-3xl border-2 border-ruby-600 p-6 shadow-2xl space-y-6">
+                            <!-- Quran Card Visual -->
+                            <div class="bg-darkness-900 rounded-2xl p-5 border border-ruby-900 text-center relative overflow-hidden group">
+                                <div class="w-20 h-20 mx-auto mb-3 red-gradient-bg rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform border-2 border-white">
+                                    <i class="fas fa-quran text-3xl"></i>
+                                </div>
+                                <h3 class="text-white font-heading font-bold text-lg">Holy Quran Learning</h3>
+                                <p class="text-xs text-gray-400 mt-1">Authentic Tajweed & Makharij Rules</p>
+                            </div>
+
+                            <!-- Laptop Online Learning Card Visual -->
+                            <div class="bg-darkness-900 rounded-2xl p-5 border border-ruby-900 text-center relative">
+                                <div class="flex items-center justify-around mb-4">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-ruby-950 rounded-full flex items-center justify-center text-ruby-400 mx-auto border border-ruby-600">
+                                            <i class="fas fa-user-graduate text-xl"></i>
+                                        </div>
+                                        <span class="text-[10px] text-gray-300 mt-1 block font-semibold">Student</span>
+                                    </div>
+                                    <div class="text-ruby-500 animate-pulse">
+                                        <i class="fas fa-headset text-2xl"></i>
+                                        <div class="text-[9px] font-bold">Live Session</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 bg-ruby-950 rounded-full flex items-center justify-center text-ruby-400 mx-auto border border-ruby-600">
+                                            <i class="fas fa-chalkboard-teacher text-xl"></i>
+                                        </div>
+                                        <span class="text-[10px] text-gray-300 mt-1 block font-semibold">Teacher</span>
+                                    </div>
+                                </div>
+                                <div class="bg-ruby-950 rounded-xl p-3 border border-ruby-700 flex items-center justify-center gap-2 text-white">
+                                    <i class="fas fa-laptop text-ruby-400 text-lg"></i>
+                                    <span class="text-xs font-bold">Interactive Zoom & Skype Online Classes</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between text-xs text-gray-300 bg-darkness-900 p-3 rounded-xl border border-ruby-900">
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-ruby-500"></i> Individual Focus</span>
+                                <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-ruby-500"></i> Flexible Times</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ayah" class="py-16 bg-white-pattern relative border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-ruby-600 relative overflow-hidden">
+                <!-- Red Corner Accents -->
+                <div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-ruby-600 rounded-tl-3xl"></div>
+                <div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-ruby-600 rounded-tr-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-ruby-600 rounded-bl-3xl"></div>
+                <div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-ruby-600 rounded-br-3xl"></div>
+
+                <div class="text-center space-y-6">
+                    <div class="inline-block bg-ruby-900 text-white text-xs font-bold px-5 py-1.5 rounded-full uppercase tracking-widest shadow">
+                        The Honor of Sacred Knowledge in Islam
+                    </div>
+
+                    <!-- Arabic Ayah -->
+                    <div class="font-arabic text-3xl sm:text-5xl text-darkness-900 font-bold leading-loose py-2">
+                        "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ"
+                    </div>
+
+                    <div class="text-xs font-bold text-ruby-700 tracking-widest uppercase">
+                        [Surah Al-Mujadila: Ayah 11]
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 pt-4 border-t border-gray-200">
+                        <!-- Urdu Translation -->
+                        <div class="bg-gray-50 p-5 rounded-2xl border border-ruby-200 text-right" dir="rtl">
+                            <span class="text-xs font-bold text-ruby-800 block mb-1">اردو ترجمہ:</span>
+                            <p class="font-urdu text-darkness-900 text-base sm:text-lg urdu-text">
+                                "اللہ تم میں سے ایمان والوں اور علم والوں کے درجات بلند فرماتا ہے۔"
+                            </p>
+                        </div>
+                        <!-- English Translation -->
+                        <div class="bg-gray-50 p-5 rounded-2xl border border-ruby-200 text-left">
+                            <span class="text-xs font-bold text-ruby-800 block mb-1">English Translation:</span>
+                            <p class="text-gray-800 text-sm sm:text-base italic font-medium">
+                                "Allah will raise those who have believed among you and those who were given knowledge, by degrees."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-20 bg-darkness-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-ruby-500 font-bold text-sm uppercase tracking-wider">Structured Learning Programs</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Our Courses</h2>
+                <div class="w-24 h-1 red-gradient-bg mx-auto rounded-full"></div>
+                <p class="text-gray-300 text-sm sm:text-base">Comprehensive Islamic and Quranic courses for kids, men, and women.</p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="mb-10 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-3xl mx-auto">
+                <div class="relative w-full sm:w-2/3">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-ruby-500"></i>
+                    <input type="text" id="courseSearch" onkeyup="filterCourses()" placeholder="Search courses (e.g. Tajweed, Qaida, Fiqh)..." 
+                        class="w-full pl-11 pr-4 py-3 bg-darkness-800 border border-ruby-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-ruby-500 text-sm">
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <button onclick="filterCategory('all')" class="category-btn active px-4 py-2.5 rounded-xl text-xs font-bold bg-ruby-600 text-white transition-all">All</button>
+                    <button onclick="filterCategory('kids')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-darkness-800 text-gray-300 border border-ruby-900 hover:bg-darkness-700 transition-all">For Kids</button>
+                    <button onclick="filterCategory('adults')" class="category-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-darkness-800 text-gray-300 border border-ruby-900 hover:bg-darkness-700 transition-all">For Adults</button>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div id="coursesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="kids adults" data-title="nazra qaida noorani">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-book-reader text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Kids & Adults</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Nazra / Qaida (Noorani Qaida)</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">نورانی قائدہ و ناظرہ قرآن مجید</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Learn Arabic letters, proper pronunciation (Makharij), and basic rules to start reading the Holy Quran fluently.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> 30 mins / session</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> Beginner Level</span>
+                        </div>
+                        <button onclick="openModal('Nazra / Qaida (Noorani Qaida)')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="kids adults" data-title="tajweed ul quran rules pronunciation">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-microphone-alt text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Kids & Adults</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Tajweed-ul-Quran</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">تجوید القرآن (قواعد و مخارج)</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Detailed rules of Tajweed, Ghunna, Madd, Qalqalah, and voice modulation for accurate recitation.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> Flexible Pace</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> Intermediate</span>
+                        </div>
+                        <button onclick="openModal('Tajweed-ul-Quran')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="kids adults" data-title="hifz ul quran memorization hafiz">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-brain text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Kids & Adults</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Hifz-ul-Quran</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">حفظ القرآن المجید (مہم و دہرائی)</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Systematic memorization of full Quran or selected Surahs with daily repetition and revision routines.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> Daily Classes</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> All Levels</span>
+                        </div>
+                        <button onclick="openModal('Hifz-ul-Quran')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="adults" data-title="fiqh e islami jurisprudence rulings namaz masail">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-balance-scale text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Adults & Youth</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Fiqh-e-Islami</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">فقہ اسلامی و ضروری مسائل</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Practical jurisprudence: Taharat, Salah, Fasting, Zakat, Duas, and daily Islamic life rules.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> 2-3 Days / Week</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> Essential</span>
+                        </div>
+                        <button onclick="openModal('Fiqh-e-Islami')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="adults" data-title="tafseer ul quran translation explanation understanding">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-book-open text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Adults</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Tafseer-ul-Quran</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">تفسیر القرآن و ترجمہ</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Word-by-word translation and authentic explanation of Divine verses for spiritual growth.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> Flexible Schedule</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> Advanced</span>
+                        </div>
+                        <button onclick="openModal('Tafseer-ul-Quran')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card bg-darkness-800 rounded-2xl border-2 border-ruby-900 p-6 flex flex-col justify-between hover:border-ruby-500 hover:shadow-2xl hover:shadow-ruby-700/20 transition-all group" data-category="kids adults" data-title="hadees e nabvi saw prophetic traditions bukhari muslim">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-14 h-14 rounded-xl red-gradient-bg p-0.5 flex items-center justify-center">
+                                <div class="w-full h-full bg-darkness-900 rounded-[10px] flex items-center justify-center text-ruby-500 group-hover:scale-105 transition-transform">
+                                    <i class="fas fa-scroll text-2xl"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold bg-ruby-950 text-ruby-400 px-3 py-1 rounded-full border border-ruby-800">Kids & Adults</span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-1">Hadees-e-Nabvi (SAW)</h3>
+                        <p class="font-urdu text-ruby-400 text-sm mb-3 urdu-text" dir="rtl">حدیثِ نبوی ﷺ و تعلیماتِ نبوی</p>
+                        <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                            Study of authentic Prophetic sayings emphasizing moral character (Akhlaq) and Sunnah lifestyle.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="border-t border-darkness-700 pt-4 mb-4 flex items-center justify-between text-xs text-gray-400">
+                            <span><i class="far fa-clock text-ruby-500 mr-1"></i> Flexible Schedule</span>
+                            <span><i class="fas fa-signal text-ruby-500 mr-1"></i> All Levels</span>
+                        </div>
+                        <button onclick="openModal('Hadees-e-Nabvi (SAW)')" class="w-full py-3 bg-darkness-900 hover:bg-ruby-600 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm border border-ruby-700">
+                            <span>Enroll / Free Trial</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-ruby-700 font-bold text-sm uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-darkness-900">Features of Israr Institute</h2>
+                <div class="w-24 h-1 red-gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">One-to-One Online Classes</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">انفرادی دروس اور مکمل توجہ</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Dedicated teacher for every individual student ensuring customized pace and focus.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">Flexible Timings</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">آپ کے اوقاتِ کار کے مطابق</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Choose class hours that fit your schedule across all international time zones.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">For Kids & Adults</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">بچوں اور بڑوں دونوں کے لیے</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Tailored teaching methodologies for young children as well as mature adults.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">Male & Female Tutors</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">معتمد اور سند یافتہ اساتذہ کرام</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Certified male Qaris and female Aalimat available for comfortable learning.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-language text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">Multi-Language Medium</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">انگلش، اردو اور عربی زبان میں تعلیم</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Lessons taught in English, Urdu, or Arabic as requested by the student.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-2xl border-2 border-ruby-200 shadow-lg hover:shadow-xl hover:border-ruby-500 transition-all flex items-start space-x-4 rtl:space-x-reverse">
+                    <div class="w-14 h-14 bg-darkness-900 text-ruby-500 rounded-xl flex items-center justify-center flex-shrink-0 border border-ruby-600">
+                        <i class="fas fa-laptop text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-lg text-darkness-900">Interactive Digital Classroom</h3>
+                        <p class="font-urdu text-ruby-700 text-xs mb-1 urdu-text" dir="rtl">جدید سافٹ ویئر اور سکرین شیئرنگ</p>
+                        <p class="text-xs text-gray-600 leading-relaxed">Screen sharing with color-coded Tajweed Mushaf for clear visual learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="py-16 bg-darkness-800 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-ruby-500 font-bold text-sm uppercase tracking-wider">Affordable Plans</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Fee Estimator</h2>
+                <div class="w-24 h-1 red-gradient-bg mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-darkness-900 rounded-3xl p-6 sm:p-10 border-2 border-ruby-600 shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-ruby-400 text-xs font-bold uppercase mb-2">1. Select Region / Currency</label>
+                            <select id="regionSelect" onchange="calculateFee()" class="w-full bg-darkness-800 border border-ruby-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-ruby-500 text-sm">
+                                <option value="US_USD">USA / Canada / International ($ USD)</option>
+                                <option value="UK_GBP">United Kingdom (£ GBP)</option>
+                                <option value="EU_EUR">Europe (€ EUR)</option>
+                                <option value="PK_PKR">Pakistan (PKR)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-ruby-400 text-xs font-bold uppercase mb-2">2. Days Per Week</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button type="button" onclick="setDays(2)" class="day-btn py-2.5 rounded-xl border border-ruby-700 bg-darkness-800 text-white text-xs font-bold hover:bg-ruby-600 transition-all">2 Days / wk</button>
+                                <button type="button" onclick="setDays(3)" class="day-btn active py-2.5 rounded-xl border border-ruby-500 bg-ruby-600 text-white text-xs font-bold transition-all">3 Days / wk</button>
+                                <button type="button" onclick="setDays(5)" class="day-btn py-2.5 rounded-xl border border-ruby-700 bg-darkness-800 text-white text-xs font-bold hover:bg-ruby-600 transition-all">5 Days / wk</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-ruby-400 text-xs font-bold uppercase mb-2">3. Class Duration</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" onclick="setDuration(30)" class="dur-btn active py-2.5 rounded-xl border border-ruby-500 bg-ruby-600 text-white text-xs font-bold transition-all">30 Minutes</button>
+                                <button type="button" onclick="setDuration(45)" class="dur-btn py-2.5 rounded-xl border border-ruby-700 bg-darkness-800 text-white text-xs font-bold hover:bg-ruby-600 transition-all">45 Minutes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Display -->
+                    <div class="bg-darkness-800 rounded-2xl p-6 border-2 border-ruby-600 text-center space-y-4 shadow-xl">
+                        <span class="text-xs font-bold text-ruby-400 uppercase tracking-widest block">Estimated Monthly Fee</span>
+                        <div id="feeDisplay" class="text-4xl sm:text-5xl font-extrabold text-white font-heading">
+                            $45 / mo
+                        </div>
+                        <p class="text-xs text-gray-300">Includes 1-on-1 teacher, trial classes, and flexible makeup sessions.</p>
+                        
+                        <div class="pt-2 border-t border-darkness-700">
+                            <span class="text-[11px] text-ruby-400 block mb-3 font-semibold">🎁 Includes 3 Days Free Trial!</span>
+                            <button onclick="openModal()" class="w-full red-gradient-bg text-white font-bold py-3 rounded-xl hover:scale-105 transition-all text-sm border border-ruby-500 shadow-lg">
+                                Claim Free Trial Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="registrationModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-darkness-900 text-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border-2 border-ruby-600 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-ruby-500 hover:text-white text-xl p-2">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 red-gradient-bg text-white rounded-full flex items-center justify-center mx-auto mb-2 border border-ruby-400">
+                    <i class="fas fa-user-plus text-xl"></i>
+                </div>
+                <h3 class="font-heading text-2xl font-bold text-white">Book 3-Day Free Trial</h3>
+                <p class="text-xs text-ruby-400 mt-1 font-semibold">No registration fee or credit card needed!</p>
+            </div>
+
+            <form id="admissionForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-ruby-400 mb-1">Student / Parent Name *</label>
+                    <input type="text" required placeholder="Enter full name" class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ruby-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-ruby-400 mb-1">Student Age *</label>
+                        <input type="number" required placeholder="e.g. 10" class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ruby-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-ruby-400 mb-1">Teacher Preference</label>
+                        <select class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-ruby-500">
+                            <option>Male Qari</option>
+                            <option>Female Qaria / Aalima</option>
+                            <option>Any Qualified Tutor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-ruby-400 mb-1">Select Course *</label>
+                    <select id="modalCourseSelect" required class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-ruby-500">
+                        <option value="">-- Choose Course --</option>
+                        <option value="Nazra / Qaida (Noorani Qaida)">Nazra / Qaida (Noorani Qaida)</option>
+                        <option value="Tajweed-ul-Quran">Tajweed-ul-Quran</option>
+                        <option value="Hifz-ul-Quran">Hifz-ul-Quran</option>
+                        <option value="Fiqh-e-Islami">Fiqh-e-Islami</option>
+                        <option value="Tafseer-ul-Quran">Tafseer-ul-Quran</option>
+                        <option value="Hadees-e-Nabvi (SAW)">Hadees-e-Nabvi (SAW)</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-ruby-400 mb-1">WhatsApp Number *</label>
+                        <input type="tel" required placeholder="+1234567890" class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ruby-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-ruby-400 mb-1">Country *</label>
+                        <input type="text" required placeholder="USA, UK, PK, etc." class="w-full bg-darkness-800 border border-ruby-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-ruby-500">
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full mt-2 red-gradient-bg text-white font-bold py-3.5 rounded-xl shadow-lg hover:scale-105 transition-all text-base border border-ruby-500">
+                    <i class="fas fa-paper-plane mr-2"></i> Submit Free Trial Request
+                </button>
+            </form>
+
+            <div id="modalSuccessMessage" class="hidden text-center py-6 space-y-3">
+                <div class="w-16 h-16 bg-ruby-950 text-ruby-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-ruby-600">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">JazakAllah Khair!</h4>
+                <p class="text-xs text-gray-300">Your registration request has been received. Our coordinator will reach out to you on WhatsApp shortly to confirm your class timings.</p>
+                <button onclick="closeModal()" class="mt-4 bg-ruby-700 hover:bg-ruby-600 text-white px-6 py-2 rounded-xl text-xs font-bold">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/923442823699?text=Assalam-o-Alaikum,%20I%20am%20interested%20in%20learning%20Quran%20online%20at%20Israr%20Institute." target="_blank" 
+       class="fixed bottom-6 right-6 z-40 bg-ruby-600 hover:bg-ruby-700 text-white p-4 rounded-full shadow-2xl border-2 border-white flex items-center justify-center group transition-transform hover:scale-110">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-darkness-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-ruby-600">
+            Chat on WhatsApp (03442823699)
+        </span>
+    </a>
+
+    <footer id="contact" class="bg-darkness-900 text-white border-t-2 border-ruby-700 pt-16 pb-8 relative bg-islamic-pattern-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Tagline Banner -->
+            <div class="bg-darkness-800 rounded-2xl p-6 sm:p-8 border-2 border-ruby-600 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div>
+                    <span class="bg-ruby-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">Admission Open</span>
+                    <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Learn Islam, Quran o Hadees from Home</h3>
+                    <p class="font-urdu text-ruby-400 text-base mt-1 urdu-text" dir="rtl">گھر بیٹھے باوقار اور معیاری دینی تعلیم حاصل کریں۔</p>
+                </div>
+                <button onclick="openModal()" class="red-gradient-bg text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:scale-105 transition-all border border-ruby-500 whitespace-nowrap text-sm">
+                    Apply For Free Trial
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full red-gradient-bg p-0.5 flex items-center justify-center">
+                            <div class="w-full h-full bg-darkness-900 rounded-full flex items-center justify-center">
+                                <i class="fas fa-quran text-ruby-500"></i>
+                            </div>
+                        </div>
+                        <span class="font-heading font-bold text-lg text-white">ISRAR INSTITUTE</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Israr Institute of Quranic Studies is a premier online Islamic academy dedicated to teaching the Holy Quran with Tajweed, Tafseer, and Islamic jurisprudence to students worldwide.
+                    </p>
+                    <div class="flex space-x-3 text-white">
+                        <a href="#" class="w-8 h-8 rounded-full bg-darkness-800 flex items-center justify-center border border-ruby-700 hover:bg-ruby-600 transition-all"><i class="fab fa-facebook-f text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-darkness-800 flex items-center justify-center border border-ruby-700 hover:bg-ruby-600 transition-all"><i class="fab fa-youtube text-xs"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-darkness-800 flex items-center justify-center border border-ruby-700 hover:bg-ruby-600 transition-all"><i class="fab fa-instagram text-xs"></i></a>
+                        <a href="https://wa.me/923442823699" target="_blank" class="w-8 h-8 rounded-full bg-darkness-800 flex items-center justify-center border border-ruby-700 hover:bg-ruby-600 transition-all"><i class="fab fa-whatsapp text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h4 class="font-heading font-bold text-ruby-500 text-sm uppercase tracking-wider mb-4 border-b border-darkness-700 pb-2">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#home" class="hover:text-ruby-500 transition-colors">Home Page</a></li>
+                        <li><a href="#ayah" class="hover:text-ruby-500 transition-colors">Importance of Knowledge</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">All Courses List</a></li>
+                        <li><a href="#features" class="hover:text-ruby-500 transition-colors">Academy Features</a></li>
+                        <li><a href="#fees" class="hover:text-ruby-500 transition-colors">Fee Estimator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Courses List -->
+                <div>
+                    <h4 class="font-heading font-bold text-ruby-500 text-sm uppercase tracking-wider mb-4 border-b border-darkness-700 pb-2">Our Key Courses</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Noorani Qaida & Nazra</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Tajweed-ul-Quran Rules</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Hifz-ul-Quran Program</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Fiqh-e-Islami & Masail</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Tafseer & Translation</a></li>
+                        <li><a href="#courses" class="hover:text-ruby-500 transition-colors">Hadees-e-Nabvi (SAW)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Details -->
+                <div>
+                    <h4 class="font-heading font-bold text-ruby-500 text-sm uppercase tracking-wider mb-4 border-b border-darkness-700 pb-2">Contact Academy</h4>
+                    <ul class="space-y-3 text-xs text-gray-300">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-map-marker-alt text-ruby-500 mt-0.5"></i>
+                            <span>Online Global Academy (Head Office: Pakistan)</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fas fa-phone text-ruby-500"></i>
+                            <a href="tel:+923442823699" class="hover:text-ruby-500 font-semibold">+92 344 2823699</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fab fa-whatsapp text-ruby-500"></i>
+                            <a href="https://wa.me/923442823699" target="_blank" class="hover:text-ruby-500 font-semibold">03442823699</a>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fas fa-envelope text-ruby-500"></i>
+                            <a href="mailto:info@israrquraninstitute.com" class="hover:text-ruby-500">info@israrquraninstitute.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-darkness-800 pt-6 text-center text-xs text-gray-400 space-y-2">
+                <p class="font-arabic text-ruby-500 text-sm">جَزَاكُمُ اللّٰهُ خَيْرًا كَثِيْرًا</p>
+                <p>© 2026 Israr Institute of Quranic Studies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Registration Modal Handlers
+        function openModal(courseName = '') {
+            const modal = document.getElementById('registrationModal');
+            const select = document.getElementById('modalCourseSelect');
+            if (courseName && select) {
+                select.value = courseName;
+            }
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('registrationModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            document.getElementById('admissionForm').classList.remove('hidden');
+            document.getElementById('modalSuccessMessage').classList.add('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('admissionForm').classList.add('hidden');
+            document.getElementById('modalSuccessMessage').classList.remove('hidden');
+        }
+
+        // Course Filter
+        function filterCourses() {
+            const query = document.getElementById('courseSearch').value.toLowerCase();
+            const cards = document.querySelectorAll('.course-card');
+
+            cards.forEach(card => {
+                const title = card.getAttribute('data-title') || '';
+                const text = card.innerText.toLowerCase();
+                if (title.includes(query) || text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-ruby-600', 'text-white');
+                btn.classList.add('bg-darkness-800', 'text-gray-300');
+            });
+            event.currentTarget.classList.remove('bg-darkness-800', 'text-gray-300');
+            event.currentTarget.classList.add('bg-ruby-600', 'text-white');
+
+            const cards = document.querySelectorAll('.course-card');
+            cards.forEach(card => {
+                const category = card.getAttribute('data-category') || '';
+                if (cat === 'all' || category.includes(cat)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Fee Calculator
+        let currentDays = 3;
+        let currentDuration = 30;
+
+        const feeTable = {
+            'US_USD': { 2: { 30: 35, 45: 50 }, 3: { 30: 45, 45: 65 }, 5: { 30: 70, 45: 95 }, currency: '$', suffix: '/ mo' },
+            'UK_GBP': { 2: { 30: 25, 45: 35 }, 3: { 30: 35, 45: 50 }, 5: { 30: 55, 45: 75 }, currency: '£', suffix: '/ mo' },
+            'EU_EUR': { 2: { 30: 30, 45: 42 }, 3: { 30: 40, 45: 58 }, 5: { 30: 65, 45: 85 }, currency: '€', suffix: '/ mo' },
+            'PK_PKR': { 2: { 30: 4000, 45: 5500 }, 3: { 30: 5500, 45: 7500 }, 5: { 30: 8500, 45: 11500 }, currency: 'PKR ', suffix: '/ ماہانہ' }
+        };
+
+        function setDays(days) {
+            currentDays = days;
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-ruby-600', 'text-white', 'border-ruby-50');
+                btn.classList.add('bg-darkness-800', 'text-white');
+            });
+            event.currentTarget.classList.remove('bg-darkness-800');
+            event.currentTarget.classList.add('bg-ruby-600', 'text-white');
+            calculateFee();
+        }
+
+        function setDuration(dur) {
+            currentDuration = dur;
+            document.querySelectorAll('.dur-btn').forEach(btn => {
+                btn.classList.remove('bg-ruby-600', 'text-white');
+                btn.classList.add('bg-darkness-800', 'text-white');
+            });
+            event.currentTarget.classList.remove('bg-darkness-800');
+            event.currentTarget.classList.add('bg-ruby-600', 'text-white');
+            calculateFee();
+        }
+
+        function calculateFee() {
+            const region = document.getElementById('regionSelect').value;
+            const data = feeTable[region];
+            const price = data[currentDays][currentDuration];
+            const display = document.getElementById('feeDisplay');
+            display.innerText = `${data.currency}${price.toLocaleString()} ${data.suffix}`;
+        }
+    </script>
+</body>
+</html>
